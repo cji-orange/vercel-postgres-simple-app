@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Instruments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Musical Instruments Database</h1>
+
+    <!-- Instrument List View -->
+    <div id="listView">
+        <h2>Instruments</h2>
+        <button id="showCreateFormBtn">Add New Instrument</button>
+        <table id="instrumentTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Key</th>
+                </tr>
+            </thead>
+            <tbody id="instrumentList">
+                <!-- Instrument rows will be populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Create Instrument Form -->
+    <div id="createView" style="display: none;">
+        <h2>Create New Instrument</h2>
+        <form id="createForm">
+            <div>
+                <label for="createName">Name:</label>
+                <input type="text" id="createName" name="name" required>
+            </div>
+            <div>
+                <label for="createCategory">Category:</label>
+                <select id="createCategory" name="category" required>
+                    <option value="Woodwinds">Woodwinds</option>
+                    <option value="Brass">Brass</option>
+                    <option value="Percussion">Percussion</option>
+                    <option value="Strings">Strings</option>
+                </select>
+            </div>
+            <div>
+                <label for="createKey">Key:</label>
+                <select id="createKey" name="key" required>
+                    <option value="Concert">Concert</option>
+                    <option value="Bb">Bb</option>
+                    <option value="Eb">Eb</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+            <button type="submit">Save Instrument</button>
+            <button type="button" id="cancelCreateBtn">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Edit Instrument Form -->
+    <div id="editView" style="display: none;">
+        <h2>Edit Instrument</h2>
+        <form id="editForm">
+            <input type="hidden" id="editId" name="id">
+            <div>
+                <label for="editName">Name:</label>
+                <input type="text" id="editName" name="name" required>
+            </div>
+            <div>
+                <label for="editCategory">Category:</label>
+                <select id="editCategory" name="category" required>
+                    <option value="Woodwinds">Woodwinds</option>
+                    <option value="Brass">Brass</option>
+                    <option value="Percussion">Percussion</option>
+                    <option value="Strings">Strings</option>
+                </select>
+            </div>
+            <div>
+                <label for="editKey">Key:</label>
+                <select id="editKey" name="key" required>
+                    <option value="Concert">Concert</option>
+                    <option value="Bb">Bb</option>
+                    <option value="Eb">Eb</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+            <button type="submit">Update Instrument</button>
+            <button type="button" id="cancelEditBtn">Cancel</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
